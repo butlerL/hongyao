@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_wode_bg"
+    android:orientation="vertical"
+    tools:context="com.hongyao.hongbao.view.activity.WoDeYuEActivity">
+
+    <include layout="@layout/include_title" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/wode_yue_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_wode_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="28dp"
+                    android:text="@string/wode_yue_text"
+                    android:textColor="@color/color_yue_text"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_wode_yue_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="0.00"
+                    android:textColor="@color/color_yue_count"
+                    android:textSize="48sp" />
+
+                <TextView
+                    android:id="@+id/tv_wode_yue_hongbao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/wode_yue_hongbao"
+                    android:textColor="@color/color_yue_hongbao"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_wode_bg"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/wode_yue_bill"
+                    android:textColor="@color/color_yue_text"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_wode_yue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>

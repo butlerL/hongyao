@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+
+android {
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.hongyao.hongbao"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 40
+        versionName "1.2.9"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs', 'libs-sdk']
+
+        }
+
+    }
+//    applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def fileName = "hongyao_android_v${defaultConfig.versionName}_${releaseTime()}_${variant.buildType.name}.apk"
+//            output.outputFile = new File(file("build/outputs/apk/")., fileName)
+//        }
+//    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        incremental true
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmmss", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile(name: 'bmall.cashier-release', ext: 'aar')
+    compile(name: 'common-release', ext: 'aar')
+    compile(name: 'im-release', ext: 'aar')
+    compile(name: 'login-release', ext: 'aar')
+    compile(name: 'mall.cart-release', ext: 'aar')
+    compile(name: 'mall.comment-release', ext: 'aar')
+    compile(name: 'mall.consignee-release', ext: 'aar')
+    compile(name: 'mall.item-release', ext: 'aar')
+    compile(name: 'rent.order.confirm-release', ext: 'aar')
+    compile(name: 'mall.order.detail-release', ext: 'aar')
+    compile(name: 'mall.order.list-release', ext: 'aar')
+    compile(name: 'mall.order.refund-release', ext: 'aar')
+    compile(name: 'mall.shop-release', ext: 'aar')
+    compile(name: 'mall.wall-release', ext: 'aar')
+    compile(name: 'setting-release', ext: 'aar')
+    compile(name: 'share2-release', ext: 'aar')
+    compile(name: 'thirdpart-release', ext: 'aar')
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:design:23.2.1'
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'com.etsy.android.grid:library:1.0.5'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+    compile 'com.navercorp.pulltorefresh:library:3.2.0@aar'
+    compile 'com.android.support:percent:23.2.0'
+    compile 'org.apmem.tools:layouts:1.10@aar'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.7'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.soundcloud.android:android-crop:1.0.1@aar'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.yalantis:ucrop:1.4.1'
+    compile project(':PushSDK')
+}

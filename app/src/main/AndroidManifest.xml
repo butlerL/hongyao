@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hongyao.hongbao">
+
+    <!-- 访问网络状态 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 多媒体相关 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 如果需要实时音视频通话模块，下面的权限也是必须的。否则，可以不加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- SDK 权限申明, 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
+    <permission
+        android:name="com.guazhou.hongyao.permission.RECEIVE_MSG"
+        android:protectionLevel="signature" />
+    <!-- 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <uses-permission android:name="com.guazhou.hongyao.permission.RECEIVE_MSG" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".HongYaoApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/myAppTheme">
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57543356e0f55a081e002274" />
+
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="1a2775ff606ce3fbbc51d1b403b6ca9d" />
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Official" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="5b19e412e54d1f469fd642826662626d" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name=".view.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.MainActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/myMainActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="xiaoma" />
+                <data android:host="main" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.HongBaoDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="hbDetail"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.HongBaoUserListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="hbUsers"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.UserTimeLineActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="usertimeline"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.CompanyListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="companyList"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.CompanyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="company"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.FaHongBaoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="hongbao"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.WriteCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.CompanyInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.UserInfoActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="userInfo"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.CompanyPayActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="companyPay"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.HongBaoThemeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.WoDeHongBaoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="myHongBao"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.WoDeYuEActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="myBalance"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.WoDeYaoShiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="myKey"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+
+        <!--支付宝支付-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"></activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"></activity>
+
+        <!--微信支付-->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.activity.BuyVipActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="vipBuy"
+                    android:scheme="xiaoma" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

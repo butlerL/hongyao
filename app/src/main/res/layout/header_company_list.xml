@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/hb_bg_search">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:drawableLeft="@drawable/hb_ic_search"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="请输入利市号或公司名"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="28dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="#121212"
+            android:textColorHint="#8E8E93"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:padding="5dp"
+            android:src="@drawable/hb_ic_cancel"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D4D4D4" />
+</LinearLayout>

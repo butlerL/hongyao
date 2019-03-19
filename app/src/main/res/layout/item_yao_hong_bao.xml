@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="46dp">
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/iv_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/ic_v" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp">
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#111111"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/iv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:baselineAlignBottom="true"
+                    android:src="@drawable/ic_male" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_name"
+                android:layout_marginTop="2dp"
+                android:textColor="#959595"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hong_bao"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_yellow"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/iv_hong_bao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_hong_bao" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@id/iv_hong_bao"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_yao"
+            android:layout_width="80dp"
+            android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#d41424"
+            android:gravity="center"
+            android:text="马上去摇"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="#2a2a2a"
+        android:textSize="14dp" />
+
+    <com.xiaoma.common.widget.NineImageGrid
+        android:id="@+id/nine_grid"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="9dp"
+        app:nigColumns="3"
+        app:nigHorizontalSpace="2dp"
+        app:nigVerticalSpace="2dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_hb_user_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/hb_ic_eye"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:textColor="#AEB1B2"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_favor_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/hb_bg_unfavored"
+            android:drawableLeft="@drawable/hb_ic_unfavored"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="1dp"
+            android:textColor="#60656F"
+            android:textSize="15dp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E4E4E4" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="#F4F4F4" />
+
+    <View
+        android:id="@+id/v_divider_second"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E4E4E4" />
+</LinearLayout>

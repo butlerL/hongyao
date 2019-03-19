@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_wode_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="9dp">
+
+        <TextView
+            android:id="@+id/tv_wode_yue_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="8dp"
+            android:text="周一"
+            android:textColor="#959595"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_wode_yue_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_wode_yue_week"
+            android:text="10.10"
+            android:textColor="#959595"
+            android:textSize="14sp" />
+
+        <FrameLayout
+            android:id="@+id/fl_wode_yue_bill"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/tv_wode_yue_date">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_wode_yue_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_yu_e_bill_hongbao"
+                app:riv_oval="true" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_wode_yue_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fl_wode_yue_bill"
+            android:paddingBottom="8dp"
+            android:text="0.00"
+            android:textColor="@color/color_text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_wode_yue_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_wode_yue_money"
+            android:layout_toRightOf="@id/fl_wode_yue_bill"
+            android:paddingBottom="8dp"
+            android:text="desc"
+            android:textColor="#959595"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_line_item" />
+</LinearLayout>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_wode_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="insideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_wode_photo" />
+
+            <include layout="@layout/include_wode_data" />
+
+            <LinearLayout
+                android:id="@+id/ll_wode_vip_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/wode_icon_width"
+                    android:layout_height="@dimen/wode_icon_width"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_wode_vip_center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/wode_vip_center"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_right_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_wode_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_wode_return_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="23dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/ic_return_money" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="红包返现"
+                        android:textColor="#555555"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/color_wode_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_wode_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/wode_icon_width"
+                        android:layout_height="@dimen/wode_icon_width"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_wode_orders" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/wode_orders"
+                        android:textColor="#555555"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/color_mine_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_after_sale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/mine_icon_width"
+                        android:layout_height="@dimen/mine_icon_width"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_after_sale" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="售后"
+                        android:textColor="#555555"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/color_wode_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_wode_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/wode_icon_width"
+                        android:layout_height="@dimen/wode_icon_width"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_wode_shopping_cart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/wode_cart"
+                        android:textColor="#555555"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/color_wode_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_wode_recommendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/wode_icon_width"
+                        android:layout_height="@dimen/wode_icon_width"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_wode_recommendation" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/wode_recommendation"
+                        android:textColor="#555555"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/color_wode_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_wode_rank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/wode_icon_width"
+                        android:layout_height="@dimen/wode_icon_width"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_wode_rank" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/wode_rank"
+                        android:textColor="#555555"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_wode_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_wode_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/wode_icon_width"
+                        android:layout_height="@dimen/wode_icon_width"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_wode_setting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/wode_setting"
+                        android:textColor="#555555"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/color_wode_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_wode_white"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/wode_icon_width"
+                        android:layout_height="@dimen/wode_icon_width"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_about" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="关于我们"
+                        android:textColor="#555555"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

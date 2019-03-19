@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_wode_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.hongyao.hongbao.view.activity.WoDeYaoShiActivity">
+
+    <include layout="@layout/include_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="28dp"
+                android:background="@color/color_wode_white"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/wode_yaoshi_text"
+                android:textColor="@color/color_yue_text"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_wode_white"
+                android:paddingBottom="4dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="4dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_wode_yaoshi" />
+
+                <TextView
+                    android:id="@+id/tv_wode_yaoshi_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_wode_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="0"
+                    android:textColor="@color/color_yue_count"
+                    android:textSize="48sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_wode_yaoshi_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_wode_yaoshi_desc" />
+
+                <TextView
+                    android:id="@+id/tv_wode_yaoshi_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="@string/wode_yaoshi_desc"
+                    android:textColor="@color/color_yue_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_wode_yaoshi_function"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/color_wode_white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/wode_yaoshi_desc_content"
+                android:textColor="@color/color_yue_text"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_yaoshi_how" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:text="如何获得摇匙？"
+                    android:textColor="@color/color_yue_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_how_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/color_wode_white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/color_yue_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:text="@string/wode_yaoshi_buy"
+                android:textColor="@color/color_yue_text"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_wode_yaoshi_buy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

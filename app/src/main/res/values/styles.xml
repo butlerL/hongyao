@@ -1,0 +1,24 @@
+<resources>
+
+    <style name="myAppTheme" parent="BaseAppTheme">
+        <item name="title_bar_color">@android:color/white</item>
+        <item name="title_bar_title_text_color">@color/color_common_text</item>
+        <item name="title_bar_right_text_color">@color/color_common_text</item>
+        <item name="title_bar_divider_color">#dfdfdf</item>
+        <item name="title_bar_back_drawable">@drawable/ic_back</item>
+        <item name="cart_drawable_on_title_bar">@drawable/c_ic_shopping_cart</item>
+        <item name="common_button">@style/my_common_button</item>
+        <item name="common_mine_header_color">#F73A46</item>
+        <item name="mall_common_color">#F73A46</item>
+    </style>
+
+    <style name="myMainActivityTheme" parent="myAppTheme">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="my_common_button" parent="common_button">
+        <item name="android:background">@drawable/my_bg_button</item>
+    </style>
+
+</resources>

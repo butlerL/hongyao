@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_tab_hongbao_pressed"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/tv_wode_hongbao_give_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wode_hongbao_give_count"
+        android:textColor="@color/color_hongbao_data_text"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_wode_hongbao_give_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:text="0.00"
+        android:textColor="@color/color_hongbao_total_text"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/tv_wode_hongbao_give_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="4dp"
+        android:gravity="right"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="@string/wode_hongbao_give_now"
+        android:textColor="@color/color_hongbao_data_text"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wode_hongbao_tip"
+        android:textColor="@color/color_hongbao_data_text"
+        android:textSize="14sp" />
+</LinearLayout>

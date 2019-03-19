@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_wode_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="9dp">
+
+        <FrameLayout
+            android:id="@+id/fl_wode_hongbao_get_avatar"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_centerVertical="true">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_wode_hongbao_get_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:riv_oval="true" />
+
+            <ImageView
+                android:id="@+id/iv_wode_hongbao_get_isv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/ic_v" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_wode_hongbao_get_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/fl_wode_hongbao_get_avatar"
+            android:drawablePadding="12dp"
+            android:drawableRight="@drawable/ic_male"
+            android:text="###"
+            android:textColor="@color/color_text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_wode_hongbao_get_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_wode_hongbao_get_name"
+            android:layout_below="@id/tv_wode_hongbao_get_name"
+            android:text="2016.10.10"
+            android:textColor="#959595"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_wode_hongbao_get_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="0.00元"
+            android:textColor="@color/color_text_black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/color_line_item" />
+</LinearLayout>

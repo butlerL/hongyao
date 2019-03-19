@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="6dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="9dp">
+
+    <FrameLayout
+        android:id="@+id/fl_avatar"
+        android:layout_width="45dp"
+        android:layout_height="45dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/riv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:id="@+id/iv_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_v" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@id/fl_avatar"
+        android:text="bb"
+        android:textColor="#111111"
+        android:textSize="14dp" />
+
+    <ImageView
+        android:id="@+id/iv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_name"
+        android:layout_alignBottom="@id/tv_name"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/ic_female"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_name"
+        android:layout_below="@id/tv_name"
+        android:text="bb"
+        android:textColor="#959595"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="7dp"
+        android:textColor="#959595"
+        android:textSize="10dp" />
+
+</RelativeLayout>

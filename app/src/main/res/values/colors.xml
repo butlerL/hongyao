@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="main_bg_color">#f5f5f5</color>
+    <color name="main_theme_color">#ff7a05</color>
+    <color name="main_half_transparent_theme_color">#50ff7a05</color>
+    <color name="main_gray">#e5e5e5</color>
+    <color name="light_gray">#fafafa</color>
+    <color name="half_black">#50000000</color>
+    <color name="half_white">#50ffffff</color>
+    <color name="main_text_color">@color/main_theme_color</color>
+    <color name="black">#000000</color>
+    <color name="window_background">@color/white</color>
+    <color name="primary_bar_bg">@color/white</color>
+    <color name="tab_text_gray">#808080</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="half_transparent">#50FFFFFF</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#3cfa0c</color>
+    <color name="actionbar_background">@color/white</color>
+    <color name="module_text_color">#999999</color>
+    <color name="toolbar_title_color">@color/text_black</color>
+    <color name="default_color">@color/black</color>
+    <color name="default_circle_number_selected_color">@color/text_black</color>
+    <color name="default_circle_number_unselected_color">@color/text_color_gray</color>
+    <color name="toast_background">@color/main_theme_color</color>
+    <color name="text_color_gray">#999999</color>
+    <color name="text_black">#1a1a1a</color>
+
+    <!-- fashaoyou start -->
+    <color name="action_bar_tittle_color_555555">#555555</color>
+    <color name="grey_white">#F7F7F7</color>
+    <color name="grey_white_has_alpha">#66FAFAFA</color>
+    <color name="g_child_page_bg_color">#FFFFFF</color>
+    <!-- fashaoyou end -->
+    
+    <!--WoDe-->
+    <color name="color_wode_white">#ffffff</color>
+    <color name="color_wode_red">#f73a46</color>
+    <color name="color_wode_black">#555555</color>
+    <color name="color_wode_black_2">#666666</color>
+    <color name="color_wode_bg">#eeeeee</color>
+    <color name="color_wode_item_bg">#ffffff</color>
+    <color name="color_wode_text_normal">#555555</color>
+    <color name="color_setting_gray">#cccccc</color>
+    <color name="color_logout_text">#ffffff</color>
+    <color name="color_logout_btn_bg_normal">#dd0000</color>
+    <color name="color_logout_btn_bg_pressed">#990000</color>
+    <color name="color_tab_hongbao_normal">#777777</color>
+    <color name="color_tab_hongbao_pressed">#f73a46</color>
+    <color name="color_hongbao_data_text">#eeeeee</color>
+    <color name="color_hongbao_total_text">#ffffff</color>
+    <color name="color_hongbao_tip_text">#222222</color>
+    <color name="color_yue_text">#777777</color>
+    <color name="color_yue_count">#ffa500</color>
+    <color name="color_yue_hongbao">#777777</color>
+    <color name="color_line">#dfdfdf</color>
+    <color name="color_line_item">#eeeeee</color>
+    <color name="color_setting_icon_bg">#dddddd</color>
+    <color name="color_text_black">#111111</color>
+    <color name="color_yaoshi_count_bg">#ee7600</color>
+    <color name="color_yaoshi_buy_bg">#ee4000</color>
+    <color name="color_setting_gender">#999999</color>
+    <color name="color_dialog_share_bg">#00cccccc</color>
+    <color name="color_dialog_share_text">#1C86EE</color>
+</resources>
